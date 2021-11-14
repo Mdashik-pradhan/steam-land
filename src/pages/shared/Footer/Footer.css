@@ -1,0 +1,13 @@
+footer {
+    height: 400px;
+}
+
+.email-subscribe > button,
+input{
+    padding: 10px 10px;
+    border: none;
+}
+
+.email-subscribe button {
+    color: red;
+}

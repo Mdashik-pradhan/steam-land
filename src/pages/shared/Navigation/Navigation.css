@@ -1,0 +1,31 @@
+.navigation-bar {
+    /* background: linear-gradient(#434343); */
+    background-color: #1b1b1b;
+    color: white;
+}
+
+.nav-link-custom {
+    font-size: 16px;
+    color: white !important;
+    text-transform: uppercase;
+    font-family: 'Noto Sans',
+    sans-serif;
+    padding: 10px 0;
+    transition: all linear .3s;
+}
+
+.nav-link-custom:focus {
+    background-color: #fa6400;
+}
+
+.nav-link-custom:hover {
+    background-color: #fa6400;
+}
+
+.navBrand{
+    font-family: 'Roboto',
+    sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: white !important;
+}

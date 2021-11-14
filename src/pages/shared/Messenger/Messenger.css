@@ -1,0 +1,56 @@
+.messenger {
+    position: fixed;
+    bottom: 0;
+    right: 40px;
+    width: 70px;
+    height: 70px;
+    background-color: #54E769;
+    border-radius: 10px;
+    animation: whatsApp-button-animation 3s infinite;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.icon {
+    padding: 30px;
+}
+
+.messenger:hover {
+    animation-play-state: paused;
+}
+
+.contact-modal {
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    width: 400px;
+    border: 1px solid gray;
+    background-color: #ffffff;
+    z-index: 100;
+    border-radius: 10px;
+}
+
+.modal-close {
+    background-color: red;
+    color: red;
+    width: 40px;
+    height: 10px;
+    border-radius: 5px;
+    position: relative;
+    top: 20px;
+    right: -335px;
+    cursor: pointer;
+}
+
+.messenger-img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+@keyframes whatsApp-button-animation {
+  0%   {bottom: 0px; ;}
+  75%  {bottom: 30px;}
+  100% {bottom: 0px; }
+}
+

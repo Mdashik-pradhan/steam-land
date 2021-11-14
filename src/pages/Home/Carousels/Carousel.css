@@ -1,0 +1,93 @@
+
+.carousel-img {
+    width: 100%;
+    height: 500px;
+}
+
+.carousel-button-controller {
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #a5a5a5;
+    border-radius: 50%;
+    color: rgb(0, 0, 0);
+    transition: all linear .3s;
+}
+.carousel-button-controller:hover {
+    background-color: #c7c7c7;
+}
+
+.banner-carousel-item {
+    background: url('../../../images/banner-2.jpg');
+}
+.banner-carousel-item-2 {
+    background: url('../../../images/banner-1.jpg');
+}
+.banner-carousel-item-3 {
+    background: url('../../../images/banner-3.jpg');
+}
+
+.carousel-text{
+    background-color: #13292979;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.banner-carousel-item-2 h1,
+.banner-carousel-item-3 h1,
+.banner-carousel-item h1 {
+    text-transform: uppercase;
+    font-family: 'Noto Sans',
+    sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+}
+.banner-carousel-item-2 p,
+.banner-carousel-item-3 p {
+    color: #fff;
+}
+
+.banner-carousel-item,
+.banner-carousel-item-2,
+.banner-carousel-item-3 {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 550px;
+}
+
+.Overlay {
+    background-color: #00000017;
+    height: 100%;
+    padding: 0px 280px;
+}
+
+
+.carousel-button {
+    background: linear-gradient(#96deda, #50c9c3);
+    border: none;
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    font-size: 20px;
+    position: relative;
+    animation: explore-button-animation 3s infinite;
+    margin-bottom: 40px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.carousel-button:hover {
+    background: linear-gradient(#96deda, #50c9c3);
+    animation-play-state: paused;
+}
+
+
+@keyframes explore-button-animation {
+  0%   {top: 0px; ;}
+  75%  {top: 50px;}
+  100% {top: 0px; }
+}
+

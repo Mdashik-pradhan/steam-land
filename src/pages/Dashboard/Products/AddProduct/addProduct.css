@@ -1,0 +1,14 @@
+.add-product-button,
+.add-review-button {
+    width: 180px;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #FF5627;
+    border-radius: 10px;
+    font-size: 20px;
+    box-shadow: 0px 3px 2px 2px black;
+}
+.add-product-button:active,
+.add-review-button:active {
+    box-shadow: none;
+}

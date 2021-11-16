@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import {Container, Grid, Box, Typography, TextField, Button, CircularProgress, Alert } from '@mui/material';
-// import loginImg from '../../../images/login.png';
+import {Container, Box, TextField, Button, CircularProgress, Alert } from '@mui/material';
 import { NavLink, useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
-import Navigation from '../../shared/Navigation/Navigation';
-import Footer from '../../shared/Footer/Footer';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import './Register.css';
 
 const Register = () => {
@@ -29,12 +27,11 @@ const Register = () => {
     }
     return (
         <div className="register-page">
-        <Navigation />
-        <Box className="register-overlay pt-5 pb-5">
+        <Box className="">
             <Container>
-                <Box className = "container register-form-container" >
-                    <Box item sx={{marginTop: 8,}}>
-                        <Typography variant="body1">Register</Typography>
+                <Box className="text-center ms-auto" >
+                    <Box className="register-form-container mx-auto text-center pb-4">
+                        <Box className="login-form-head mb-2"><AccountCircleIcon /> Register</Box>
                         {!isLoading && <form onSubmit={handleSubmit}>
                             <TextField 
                             sx={{width: '75%', m:1 }}
@@ -71,22 +68,18 @@ const Register = () => {
                             type="password" 
                             variant="standard" 
                             />
-                            <Button sx={{width: '75%', m: 1}} variant="contained" type="submit">Register</Button>
-                            <NavLink to="/login">
+                            <Button className="submit-button mb-3" sx={{width: '75%', m: 1}} variant="contained" type="submit">Register</Button><br />
+                            <NavLink style={{textDecoration: 'none'}} to="/login">
                                 <Button variant="text">Already Register? Please Login</Button>
                             </NavLink>
                         </form>}
-                        {isLoading && <CircularProgress/>}
+                        {isLoading && <CircularProgress sx={{color: 'purple'}}/>}
                         {user?.email && <Alert severity="success">User Created Successfully!</Alert>}
                         {authError && <Alert severity='error'>{authError}</Alert>}
                     </Box>
-                    <Grid item xs={6}>
-                        {/* <img style={{width: '100%'}} src={loginImg} alt="" /> */}
-                    </Grid>
                 </Box>
             </Container>
             </Box>
-            <Footer />
         </div>
     )
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import './Messenger.css';
 import useAuth from '../../../hooks/useAuth';
-import messengerImg from '../../../images/messenger.png.crdownload';
+import messengerImg from '../../../images/messenger.png';
 
 
 const Messenger = () => {

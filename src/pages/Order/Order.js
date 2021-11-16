@@ -14,7 +14,7 @@ const Order = () => {
     console.log(_id)
 
     useEffect(() => {
-        const url = `http://localhost:5000/products/${_id}`;
+        const url = `https://hidden-sea-41707.herokuapp.com/products/${_id}`;
         fetch(url)
         .then(res => res.json())
         .then(data => setProduct(data))
@@ -23,7 +23,7 @@ const Order = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/orders', {
+        fetch('https://hidden-sea-41707.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

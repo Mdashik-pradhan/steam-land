@@ -6,7 +6,7 @@ const ProductsMaintain = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        const url = `http://localhost:5000/products`;
+        const url = `https://hidden-sea-41707.herokuapp.com/products`;
         fetch(url)
         .then(res => res.json())
         .then(data => setProducts(data));
@@ -16,7 +16,7 @@ const ProductsMaintain = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/products/${id}`;
+            const url = `https://hidden-sea-41707.herokuapp.com/products/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

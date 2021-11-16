@@ -20,7 +20,7 @@ const AddProduct = () => {
     console.log(product)
 
     const handleSubmit = e => {
-        fetch('http://localhost:5000/products', {
+        fetch('https://hidden-sea-41707.herokuapp.com/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

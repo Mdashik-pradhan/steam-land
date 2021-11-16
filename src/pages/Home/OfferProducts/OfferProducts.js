@@ -13,7 +13,7 @@ const OfferProducts = () => {
     }
 
     useEffect(() => {
-        const url = `http://localhost:5000/products`;
+        const url = `https://hidden-sea-41707.herokuapp.com/products`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProducts(data));

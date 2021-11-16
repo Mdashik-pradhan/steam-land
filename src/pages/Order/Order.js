@@ -3,15 +3,18 @@ import { useForm } from "react-hook-form";
 import useAuth from '../../hooks/useAuth';
 import Footer from '../shared/Footer/Footer';
 import Navigation from '../shared/Navigation/Navigation';
-import { useParams } from 'react-router-dom';
-import './Order.css';
+import { useParams, useHistory } from 'react-router-dom';
+import './ProductDetails.css';
 
 const Order = () => {
     const [product, setProduct] = useState([]);
+    const history = useHistory();
     const { user } = useAuth();
     const {_id} = useParams();
 
-    console.log(_id)
+    const handleRedirect = () => {
+        history.push(`/payment`);
+    }
 
     useEffect(() => {
         const url = `https://hidden-sea-41707.herokuapp.com/products/${_id}`;
@@ -19,7 +22,6 @@ const Order = () => {
         .then(res => res.json())
         .then(data => setProduct(data))
     }, [])
-    console.log(product);
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
@@ -32,13 +34,14 @@ const Order = () => {
         })
         .then(res => res.json())
         .then(data => {
-            
+            handleRedirect();
         })
     };
     return (
         <div>
             <Navigation />
             <div className="container order-form-container d-flex justify-content-center ">
+                    <h2 className="mb-4">Your Information <span className="brand-text-color-3"> Please</span>!</h2>
                 <form onSubmit={handleSubmit(onSubmit)} className="mt-5 mb-5 w-50 ">
                     <input type="name" defaultValue={user?.displayName} {...register("name")} placeholder="Name"/> <br />
                     <input type="email" defaultValue={user?.email} {...register("email", { required: true })}  placeholder="Email"/> <br />

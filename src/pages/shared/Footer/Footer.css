@@ -1,6 +1,12 @@
 footer {
     height: 400px;
 }
+.home-footer {
+    height: 400px;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+}
 
 .email-subscribe > button,
 input{

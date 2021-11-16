@@ -25,14 +25,17 @@ import ProductsMaintain from '../Products/ProductsMaintain/ProductsMaintain';
 import AddAdmin from '../AddAdmin/AddAdmin';
 import UserReviews from '../UserReviews/UserReviews';
 import MyOrders from '../Order/MyOrders/MyOrders';
+import AdminRoute from '../../Login/AdminRoute/AdminRoute';
+import useAuth from '../../../hooks/useAuth';
 
 
 const drawerWidth = 240;
 
 function Dashboard(props) {
+  const {admin, user, logout} = useAuth();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-    let { path, url } = useRouteMatch();
+    const { path, url } = useRouteMatch();
 
 
   const handleDrawerToggle = () => {
@@ -44,27 +47,35 @@ function Dashboard(props) {
       {/* <Toolbar sx={{backgroundColor: 'black'}}/> */}
       <Divider />
       <List>
-          <Button >
-            <Link className="nav-link text-black" to='/'> <AppsOutlinedIcon /> Home</Link>
-          </Button>
-          <Button >
-            <Link className="nav-link text-black" to={`${url}/myOrders`}> <BorderAllOutlinedIcon /> My Orders</Link>
-          </Button>
-          <Button >
-            <Link className="nav-link text-black" to={`${url}/addReview`}> <ReviewsOutlinedIcon /> Review</Link>
-          </Button>
-          <Button >
-            <Link className="nav-link text-black" to={`${url}/addAdmin`}> <PersonAddOutlinedIcon /> Add Admin</Link>
-          </Button>
-          <Button >
-            <Link className="nav-link text-black" to={`${url}/productsMaintain`}> <StoreMallDirectoryOutlinedIcon /> Products Maintain</Link>
-          </Button>
-          <Button >
-            <Link className="nav-link text-black" to={`${url}/allOrders`}> <ReorderOutlinedIcon /> All Orders</Link>
-          </Button>
-          <Button >
-            <Link className="nav-link text-black" to={`${url}/addProduct`}> <AddBoxOutlinedIcon /> Add Product</Link>
-          </Button>
+        <Button >
+          <Link className="nav-link text-black" to='/'> <AppsOutlinedIcon /> Home</Link>
+        </Button>
+        <Button >
+          <Link className="nav-link text-black" to={`${url}/myOrders`}> <BorderAllOutlinedIcon /> My Orders</Link>
+        </Button>
+        <Button >
+          <Link className="nav-link text-black" to={`${url}/addReview`}> <ReviewsOutlinedIcon /> Review</Link>
+        </Button>
+        {
+          admin &&
+          <div>
+            <Button >
+              <Link className="nav-link text-black" to={`${url}/addAdmin`}> <PersonAddOutlinedIcon /> Add Admin</Link>
+            </Button>
+            <Button >
+              <Link className="nav-link text-black" to={`${url}/productsMaintain`}> <StoreMallDirectoryOutlinedIcon /> Products Maintain</Link>
+            </Button>
+            <Button >
+              <Link className="nav-link text-black" to={`${url}/allOrders`}> <ReorderOutlinedIcon /> All Orders</Link>
+            </Button>
+            <Button >
+              <Link className="nav-link text-black" to={`${url}/addProduct`}> <AddBoxOutlinedIcon /> Add Product</Link>
+            </Button>
+          </div>
+        }
+          <div className="text-center m-3 mt-5">
+            {user?.email && <Link className="nav-link nav-link-custom dashboard-log-out" onClick={logout}><i class="fas fa-sign-out-alt"></i> Log Out</Link>}
+          </div>
       </List>
       </div>
   );
@@ -137,18 +148,18 @@ function Dashboard(props) {
           <Route exact path={path}>
 
           </Route>
-          <Route path={`${path}/addProduct`}>
+          <AdminRoute path={`${path}/addProduct`}>
             <AddProduct />
-          </Route>
-          <Route path={`${path}/allOrders`}>
+          </AdminRoute>
+          <AdminRoute path={`${path}/allOrders`}>
             <AllOrders />
-          </Route>
-          <Route path={`${path}/productsMaintain`}>
+          </AdminRoute>
+          <AdminRoute path={`${path}/productsMaintain`}>
             <ProductsMaintain />
-          </Route>
-          <Route path={`${path}/addAdmin`}>
+          </AdminRoute>
+          <AdminRoute path={`${path}/addAdmin`}>
             <AddAdmin />
-          </Route>
+          </AdminRoute>
           <Route path={`${path}/addReview`}>
             <UserReviews />
           </Route>

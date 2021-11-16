@@ -12,7 +12,7 @@ const AddAdmin = () => {
     }
     const handleAdminSubmit = e => {
         const user = { email };
-        fetch('https://stark-caverns-04377.herokuapp.com/users/admin', {
+        fetch('https://hidden-sea-41707.herokuapp.com/users/admin', {
             method: 'PUT',
             headers: {
                 'authorization': `Bearer ${token}`,
@@ -25,6 +25,7 @@ const AddAdmin = () => {
                 if (data.modifiedCount) {
                     console.log(data);
                     setSuccess(true);
+
                 }
             })
 

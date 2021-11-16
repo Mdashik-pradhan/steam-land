@@ -59,12 +59,48 @@ const AddProduct = () => {
                 />
                 <TextareaAutosize
                 onBlur={handleOnBlur}
-                name="description"
+                name="list_1"
                 style={{ width: '75%', margin:'.5rem', padding: '12px' }}
                 aria-label="minimum height"
                 minRows={3}
                 minCols={12}
-                placeholder="Description..."
+                placeholder="Description list 1"
+                />
+                <TextareaAutosize
+                onBlur={handleOnBlur}
+                name="list_2"
+                style={{ width: '75%', margin:'.5rem', padding: '12px' }}
+                aria-label="minimum height"
+                minRows={3}
+                minCols={12}
+                placeholder="Description list 2"
+                />
+                <TextareaAutosize
+                onBlur={handleOnBlur}
+                name="list_3"
+                style={{ width: '75%', margin:'.5rem', padding: '12px' }}
+                aria-label="minimum height"
+                minRows={3}
+                minCols={12}
+                placeholder="Description list 3"
+                />
+                <TextareaAutosize
+                onBlur={handleOnBlur}
+                name="list_4"
+                style={{ width: '75%', margin:'.5rem', padding: '12px' }}
+                aria-label="minimum height"
+                minRows={3}
+                minCols={12}
+                placeholder="Description list 4"
+                />
+                <TextareaAutosize
+                onBlur={handleOnBlur}
+                name="list_5"
+                style={{ width: '75%', margin:'.5rem', padding: '12px' }}
+                aria-label="minimum height"
+                minRows={3}
+                minCols={12}
+                placeholder="Description list 4"
                 />
                 <TextField
                 onBlur={handleOnBlur}

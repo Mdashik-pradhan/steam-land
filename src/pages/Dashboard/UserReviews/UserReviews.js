@@ -2,16 +2,20 @@ import React, { useState} from 'react';
 import {
     TextField,
     TextareaAutosize
-} from '@mui/material'
+} from '@mui/material';
+import Rating from '@mui/material/Rating';
 
 const UserReviews = () => {
     const [review, setReview] = useState({});
+     const [values, setValues] = React.useState(3);
 
     const handleOnBlur = e => {
         const field = e.target.name;
         const value = e.target.value;
         const newReview = {...review};
+        const ratings = values
         newReview[field] = value;
+        newReview['ratings'] = ratings;
         setReview(newReview);
 
     }
@@ -74,14 +78,15 @@ const UserReviews = () => {
                 minRows={3}
                 minCols={12}
                 placeholder="Description..."
-                />
-                <TextField
-                onBlur={handleOnBlur}
-                name="ratings"
-                sx={{width: '75%', m:1}}
-                label="Ratings"
-                id="outlined-size-small"
-                size="small"
+                /> <br />
+                <span className="fs-4">Quality</span>
+                &nbsp; &nbsp;
+                <Rating
+                name="simple-controlled"
+                value={values}
+                onChange={(event, newValue) => {
+                setValues(newValue);
+                }}
                 />
                 <br />
                 <button  type="submit" className="add-review-button mt-5">Add Review</button>

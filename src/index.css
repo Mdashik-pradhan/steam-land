@@ -55,6 +55,11 @@ p {
   z-index: 1000;
 }
 
+.brand-icon {
+  width: 60px;
+  height: 60px;
+}
+
 /* font-family: 'Noto Sans',
 sans-serif;
 font-family: 'Open Sans',

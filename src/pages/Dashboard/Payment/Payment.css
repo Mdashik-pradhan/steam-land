@@ -1,0 +1,7 @@
+.payment-method-bg {
+    height: 90vh;
+    background: url('../../../images/payment-page-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

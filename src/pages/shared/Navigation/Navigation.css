@@ -14,18 +14,32 @@
     transition: all linear .3s;
 }
 
-.nav-link-custom:focus {
-    background-color: #fa6400;
-}
 
 .nav-link-custom:hover {
     background-color: #fa6400;
 }
 
 .navBrand{
+    text-transform: uppercase;
+    color: #fa6400 !important;
+}
+
+.navBrand h1 {
     font-family: 'Roboto',
     sans-serif;
-    font-size: 24px;
-    text-transform: uppercase;
-    color: white !important;
+    font-size: 26px;
+}
+
+.log-out-button
+,
+.login-button,
+.dashboard-log-out {
+    border: 2px solid #fa6400;
+    padding: 10px 0;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.dashboard-log-out {
+    color: #0e0c0c !important;
 }

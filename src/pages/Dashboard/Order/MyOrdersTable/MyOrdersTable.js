@@ -12,8 +12,8 @@ import EditIcon from '@mui/icons-material/Edit';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-    backgroundColor: theme.palette.common.black,
-    color: theme.palette.common.white,
+    backgroundColor: theme.palette.common.white,
+    color: theme.palette.common.black,
   },
   [`&.${tableCellClasses.body}`]: {
     fontSize: 14,
@@ -39,11 +39,11 @@ const MyOrdersTable = ({orders, handleDelete}) => {
       <Table aria-label="customized table">
         <TableHead>
           <TableRow>
-            <StyledTableCell align="left">Email</StyledTableCell>
-            <StyledTableCell align="left">Orders Name</StyledTableCell>
-            <StyledTableCell align="left">Price</StyledTableCell>
-            <StyledTableCell align="left">Action</StyledTableCell>
-            <StyledTableCell align="left">Status</StyledTableCell>
+            <StyledTableCell align="left" sx={{fontSize: '18px'}}>Email</StyledTableCell>
+            <StyledTableCell align="left" sx={{fontSize: '18px'}}>Orders Name</StyledTableCell>
+            <StyledTableCell align="left" sx={{fontSize: '18px'}}>Price</StyledTableCell>
+            <StyledTableCell align="left" sx={{fontSize: '18px'}}>Status</StyledTableCell>
+            <StyledTableCell align="left" sx={{fontSize: '18px'}}>Cancel</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -52,8 +52,8 @@ const MyOrdersTable = ({orders, handleDelete}) => {
               <StyledTableCell align="left">{order?.email}</StyledTableCell>
               <StyledTableCell align="left">{order?.product.title}</StyledTableCell>
               <StyledTableCell align="left">{order?.product.price}</StyledTableCell>
-              <StyledTableCell align="left"><DeleteForeverIcon onClick={() =>handleDelete(order._id)} style={{backgroundColor: 'red', color: 'white', borderRadius: '2px'}} /> <EditIcon /> </StyledTableCell>
-              <StyledTableCell align="left"></StyledTableCell>
+              <StyledTableCell align="left"><button className="bg-danger border-none rounded">{order?.product.status}</button> </StyledTableCell>
+              <StyledTableCell align="left"><button onClick={() =>handleDelete(order._id)} style={{backgroundColor: 'red', color: 'white', borderRadius: '2px'}}>Cancel</button> </StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>

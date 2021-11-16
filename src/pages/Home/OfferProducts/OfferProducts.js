@@ -3,6 +3,8 @@ import { useHistory } from 'react-router';
 import './OfferProducts.css';
 import VisibilityRoundedIcon from '@mui/icons-material/VisibilityRounded';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import Rating from '@mui/material/Rating';
+import StarIcon from '@mui/icons-material/Star';
 
 
 const OfferProducts = () => {
@@ -20,7 +22,7 @@ const OfferProducts = () => {
     }, [])
 
     const handleDetails = id => {
-        history.push(`/order/${id}`)
+        history.push(`/productDetails/${id}`)
     }
 
     return (
@@ -37,9 +39,16 @@ const OfferProducts = () => {
                             </div>
                             <div className="text-center">
                                 <h5>{product?.title}</h5>
-                                <h6 className="price">{product?.price}</h6>
+                                <h6 className="price">BDT {product?.price}</h6>
+                                <Rating
+                                name="text-feedback"
+                                value={product?.ratings}
+                                readOnly
+                                precision={1}
+                                emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
+                                /> <br />
                                 <button onClick={() => handleDetails(product?._id)} className="product-button mt-4"><VisibilityRoundedIcon /> Details</button>
-                                <button onClick={() => handleDetails(product?._id)} className="buy-now"><AddShoppingCartIcon /> BUY NOW</button>
+                                {/* <button onClick={() => handleDetails(product?._id)} className="buy-now"><AddShoppingCartIcon /> BUY NOW</button> */}
                             </div>
                         </div>
                     </div>

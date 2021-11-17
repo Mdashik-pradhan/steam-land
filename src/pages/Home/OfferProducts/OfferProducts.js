@@ -29,7 +29,7 @@ const OfferProducts = () => {
         <div className="container mt-5">
             <div className="row g-3">
                 {
-                    products.map(product => ((
+                    products.slice(0, 6).map(product => ((
 
                     <div div className="col-sm-6 col-md-4">
                         <div className="product">

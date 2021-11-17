@@ -13,6 +13,7 @@ import Register from "./pages/Login/Register/Register";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
 import Order from "./pages/Order/Order";
 import Payment from "./pages/Dashboard/Payment/Payment";
+import NotFound from './pages/NotFound/NotFound';
 
 
 function App() {
@@ -46,6 +47,9 @@ function App() {
             </Route>
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route  path="*">
+              <NotFound />
             </Route>
           </Switch>
       </Router>

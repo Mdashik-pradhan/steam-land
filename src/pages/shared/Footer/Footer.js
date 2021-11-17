@@ -22,7 +22,7 @@ const Footer = () => {
                         <p>Official: steam-land@steam-land.com</p>
                         <p> Helpline : 01738308375 (Available : 24/7)</p>
                     </div>
-                    <div className="col-md-4 p-2">
+                    <div className="col-md-4 p-2 mb-4">
                         <div className="email-subscribe" >
                             {/* <input type="email" name="email" placeholder="Enter Your Email"/><button>SUBSCRIBE</button> */}
                             <li style={{listStyle: 'none'}}>

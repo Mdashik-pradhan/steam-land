@@ -51,8 +51,8 @@ const MyOrdersTable = ({orders, handleDelete}) => {
             <StyledTableRow key={order._id}>
               <StyledTableCell align="left">{order?.email}</StyledTableCell>
               <StyledTableCell align="left">{order?.product.title}</StyledTableCell>
-              <StyledTableCell align="left">{order?.product.price}</StyledTableCell>
-              <StyledTableCell align="left"><button className="bg-danger border-none rounded">{order?.product.status}</button> </StyledTableCell>
+              <StyledTableCell align="left">BTD {order?.product.price}</StyledTableCell>
+              <StyledTableCell align="left"><button className="brand-background-color-3 text-light border-none rounded">{order?.orderStatus}</button> </StyledTableCell>
               <StyledTableCell align="left"><button onClick={() =>handleDelete(order._id)} style={{backgroundColor: 'red', color: 'white', borderRadius: '2px'}}>Cancel</button> </StyledTableCell>
             </StyledTableRow>
           ))}

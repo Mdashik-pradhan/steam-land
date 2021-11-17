@@ -7,7 +7,7 @@ const Review = ({review}) => {
     const {name, profession, description, ratings, img} = review;
     return (
         <div class="mt-5 mb-5 pb-5" >
-            <div className="">
+            <div className="mb-5 text-center">
                 <h2><span className="brand-text-color-1 text-center mb-4">Consumer </span>Says About Us</h2>
             </div>
                 <div className="review p-3">

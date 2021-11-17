@@ -30,7 +30,7 @@ const Order = () => {
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify({data, email: user.email, product})
+            body: JSON.stringify({data, email: user.email, product, orderStatus: 'Pending'})
         })
         .then(res => res.json())
         .then(data => {
@@ -40,8 +40,8 @@ const Order = () => {
     return (
         <div>
             <Navigation />
-            <div className="container order-form-container d-flex justify-content-center ">
-                    <h2 className="mb-4">Your Information <span className="brand-text-color-3"> Please</span>!</h2>
+            <h2 className="mt-5 text-center">Your Information <span className="brand-text-color-3"> Please</span>!</h2>
+            <div className="container order-form-container d-flex justify-content-center text-center">
                 <form onSubmit={handleSubmit(onSubmit)} className="mt-5 mb-5 w-50 ">
                     <input type="name" defaultValue={user?.displayName} {...register("name")} placeholder="Name"/> <br />
                     <input type="email" defaultValue={user?.email} {...register("email", { required: true })}  placeholder="Email"/> <br />

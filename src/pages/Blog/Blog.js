@@ -34,54 +34,162 @@ const Blog = () => {
   };
 
   return (
-    <Card className="container mb-5 pb-5" sx={{ maxWidth: 345 }}>
-      <CardHeader
-        avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
-          </Avatar>
-        }
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
-      />
-      <CardMedia
-        component="img"
-        height="194"
-        image = "https://www.thespruce.com/thmb/-pi1ihi7DrqGd3NBnnEWqf751gg=/4200x2800/filters:fill(auto,1)/iron-like-a-professional-2146174-01.1-HERO-eaf21769459745978701c93072d5409f.jpg"
-        alt="Paella dish"
-      />
-      <CardContent>
-        <Typography variant="body2" color="text.secondary">
-          Can we use steam iron without water ?
-              It 's easy to use your steam iron as a dry iron without water. If you want to use your steam iron as a dry iron, simply empty the water from the iron or set the iron to its dry heat setting.
-        </Typography>
-      </CardContent>
-      <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton>
-        <ExpandMore
-          expand={expanded}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </ExpandMore>
-      </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-        </CardContent>
-      </Collapse>
-    </Card>
+    <div className="container">
+        <h2 className="text-center mb-5 pb-3">Latest <span className="brand-text-color-1">Blogs</span></h2>
+        <div className="row">
+            <div className="col-md-4">
+            <Card className="container mb-5 pb-5" sx={{ maxWidth: 345 }}>
+            <CardHeader
+                avatar={
+                <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+                    R
+                </Avatar>
+                }
+                action={
+                <IconButton aria-label="settings">
+                    <MoreVertIcon />
+                </IconButton>
+                }
+                title="How We Can Use Steam Iron Properly"
+                subheader="November 14, 2021"
+            />
+            <CardMedia
+                component="img"
+                height="194"
+                image = "https://www.thespruce.com/thmb/-pi1ihi7DrqGd3NBnnEWqf751gg=/4200x2800/filters:fill(auto,1)/iron-like-a-professional-2146174-01.1-HERO-eaf21769459745978701c93072d5409f.jpg"
+                alt="Paella dish"
+            />
+            <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                Can we use steam iron without water ?
+                    It 's easy to use your steam iron as a dry iron without water. If you want to use your steam iron as a dry iron, simply empty the water from the iron or set the iron to its dry heat setting.
+                </Typography>
+            </CardContent>
+            <CardActions disableSpacing>
+                <IconButton aria-label="add to favorites">
+                <FavoriteIcon />
+                </IconButton>
+                <IconButton aria-label="share">
+                <ShareIcon />
+                </IconButton>
+                <ExpandMore
+                expand={expanded}
+                onClick={handleExpandClick}
+                aria-expanded={expanded}
+                aria-label="show more"
+                >
+                <ExpandMoreIcon />
+                </ExpandMore>
+            </CardActions>
+            <Collapse in={expanded} timeout="auto" unmountOnExit>
+                <CardContent>
+                </CardContent>
+            </Collapse>
+            </Card>
+            </div>
+            <div className="col-md-4">
+            <Card className="container mb-5 pb-5" sx={{ maxWidth: 345 }}>
+            <CardHeader
+                avatar={
+                <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+                    R
+                </Avatar>
+                }
+                action={
+                <IconButton aria-label="settings">
+                    <MoreVertIcon />
+                </IconButton>
+                }
+                title="How We Can Use Steam Iron Properly"
+                subheader="November 14, 2021"
+            />
+            <CardMedia
+                component="img"
+                height="194"
+                image = "https://smoothwares.com/wp-content/uploads/2017/03/How-To-Use-A-Steam-Iron.jpg"
+                alt="Paella dish"
+            />
+            <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                Can we use steam iron without water ?
+                    It 's easy to use your steam iron as a dry iron without water. If you want to use your steam iron as a dry iron, simply empty the water from the iron or set the iron to its dry heat setting.
+                </Typography>
+            </CardContent>
+            <CardActions disableSpacing>
+                <IconButton aria-label="add to favorites">
+                <FavoriteIcon />
+                </IconButton>
+                <IconButton aria-label="share">
+                <ShareIcon />
+                </IconButton>
+                <ExpandMore
+                expand={expanded}
+                onClick={handleExpandClick}
+                aria-expanded={expanded}
+                aria-label="show more"
+                >
+                <ExpandMoreIcon />
+                </ExpandMore>
+            </CardActions>
+            <Collapse in={expanded} timeout="auto" unmountOnExit>
+                <CardContent>
+                </CardContent>
+            </Collapse>
+            </Card>
+            </div>
+            <div className="col-md-4">
+            <Card className="container mb-5 pb-5" sx={{ maxWidth: 345 }}>
+            <CardHeader
+                avatar={
+                <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+                    R
+                </Avatar>
+                }
+                action={
+                <IconButton aria-label="settings">
+                    <MoreVertIcon />
+                </IconButton>
+                }
+                title="How We Can Use Steam Iron Properly"
+                subheader="November 14, 2021"
+            />
+            <CardMedia
+                component="img"
+                height="194"
+                image = "https://contentgrid.homedepot-static.com/hdus/en_US/DTCCOMNEW/Articles/steamers-vs-irons-section-1.jpg"
+                alt="Paella dish"
+            />
+            <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                Can we use steam iron without water ?
+                    It 's easy to use your steam iron as a dry iron without water. If you want to use your steam iron as a dry iron, simply empty the water from the iron or set the iron to its dry heat setting.
+                </Typography>
+            </CardContent>
+            <CardActions disableSpacing>
+                <IconButton aria-label="add to favorites">
+                <FavoriteIcon />
+                </IconButton>
+                <IconButton aria-label="share">
+                <ShareIcon />
+                </IconButton>
+                <ExpandMore
+                expand={expanded}
+                onClick={handleExpandClick}
+                aria-expanded={expanded}
+                aria-label="show more"
+                >
+                <ExpandMoreIcon />
+                </ExpandMore>
+            </CardActions>
+            <Collapse in={expanded} timeout="auto" unmountOnExit>
+                <CardContent>
+                </CardContent>
+            </Collapse>
+            </Card>
+            </div>
+        </div>
+
+    </div>
   );
 }
 

@@ -27,6 +27,7 @@ import UserReviews from '../UserReviews/UserReviews';
 import MyOrders from '../Order/MyOrders/MyOrders';
 import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 import useAuth from '../../../hooks/useAuth';
+import Payment from '../Payment/Payment';
 
 
 const drawerWidth = 240;
@@ -52,6 +53,9 @@ function Dashboard(props) {
         </Button>
         <Button >
           <Link className="nav-link text-black" to={`${url}/myOrders`}> <BorderAllOutlinedIcon /> My Orders</Link>
+        </Button>
+        <Button >
+          <Link className="nav-link text-black" to='/payment'> <i class="fas fa-dollar-sign"></i> Payment</Link>
         </Button>
         <Button >
           <Link className="nav-link text-black" to={`${url}/addReview`}> <ReviewsOutlinedIcon /> Review</Link>

@@ -1,9 +1,13 @@
 ### Steam Land
 
 **Users can see only home page and login page before login.**
+
 **After login they can see dashboard and explore page.**
+
 **User can order a product and see them in dashboard.**
+
 **If admin login he can see everything and will able to product management like add, delete or update etc.**
+
 **There has maintain responsiveness for desktop and mobile.**
 
 

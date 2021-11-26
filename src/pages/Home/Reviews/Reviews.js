@@ -46,6 +46,9 @@ const Reviews = () => {
     }, [])
     return (
         <div className="container mt-5 mb-5">
+            <div className="mb-2 text-center">
+                <h2><span className="brand-text-color-1 text-center mb-4">Consumer </span>Says About Us</h2>
+            </div>
             <Carousel
             swipeable={false}
             draggable={false}
